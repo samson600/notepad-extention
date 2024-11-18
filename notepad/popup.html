@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notes</title>
+  <style>
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+        }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+        }
+        .container{
+          width: 300px;
+          height: 600px;
+        }
+      #hBtn{
+      height: 50px;
+      width: 100%;
+      background-color:#1e72fe ;
+      color:#ffffff;
+      padding: 8px 18px;
+      line-height: 30px;
+      display: flex;
+      justify-content: space-between;
+      }
+      #hBtn button{
+      border:none;
+      width: 50px;
+      color: #fff;
+      border-radius: 4px;
+      padding: 6px;
+    }
+    .content{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+        .card {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            margin-top:5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+        }
+        .add-btn{
+            display: inline-block;
+            background-color: yellow;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+        }
+        .back{
+          font-weight: 800;
+          font-size: 30px;
+        }
+
+        .remove-btn:hover {
+            background-color: darkred;
+        }
+
+        .card-content {
+            margin-top: 10px;
+        }
+    input{
+      border:none;
+      height: 60px;
+      width: 100%;
+      padding: 20px;
+      font-size: 30px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    textarea{
+        width: 100%;
+        height: 78vh;
+        padding: 20px;
+        box-sizing: border-box;
+        border: none;
+    }
+    input:focus, textarea:focus {
+     outline: none;
+    }
+    .date{
+      font-size:10px;
+      text-align:right;
+      padding: 4px;
+      color:gray;
+    }
+    .del-popup{
+      position:absolute;
+      height:100vh;
+      width:100%;
+      background-color: #28262664; 
+      z-index:9999;
+    }
+    .del-popup .popup-card{
+      height:170px;
+      width:320px;
+      margin:100px auto;
+      padding:20px;
+      color:#fecb3b;
+      background-color: #0f0f0f; 
+      border-radius:4px;
+    }
+    .del-popup .popup-card .btns{
+      display:flex;
+      justify-content:right
+    }
+    .del-popup .popup-card .btns button{
+      height:30px;
+      width:70px;
+      text-align:center;
+      margin:50px 10px 10px 0;
+      color:white;
+      background-color:#e4b225;
+      border:1px solid white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="alt-box"></div>
+    <div id="hBtn">gh</div>
+    <div class="content"></div>
+  </div>
+<script src="popup.js"></script>
+</body>
+</html>
